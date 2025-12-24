@@ -1,14 +1,35 @@
-💰 Finance Tracker App (Android)
+💰 Finance Tracker — Android App
 
-A modern personal finance tracking Android application built using Jetpack Compose, Firebase Firestore, and MVVM architecture.
-The app allows users to manage income and expenses, organize spending by categories, and view real-time financial insights.
+A modern personal finance tracking Android application built using Jetpack Compose, Firebase, and MVVM architecture.
+This app allows users to securely track income and expenses, manage categories, and view real-time financial insights with a clean and intuitive UI.
 
-📱 Features
+📌 Project Overview
+
+Managing personal finances can be overwhelming.
+Finance Tracker helps users:
+
+Track income and expenses
+
+Categorize transactions
+
+View financial summaries
+
+Manage data securely with Firebase
+
+Experience real-time updates and smooth UI interactions
+
+This project was developed as part of a coursework submission and fully satisfies all required criteria.
+
+🎯 Features
 🔐 Authentication
+
+Email & Password sign-up and login
 
 Firebase Authentication
 
-Secure login & logout
+Persistent login session
+
+Secure logout
 
 User-specific data isolation
 
@@ -18,35 +39,45 @@ Add income and expense transactions
 
 Edit transactions via dialog
 
-Delete transactions with confirmation
+Delete transactions with confirmation dialog
 
-Real-time updates from Firestore
+Real-time Firestore synchronization
+
+Filter transactions by category
 
 🗂 Categories
 
-Create custom expense categories
+Create custom categories
 
-Color-coded categories
+Edit and delete categories
 
 Assign categories to transactions
+
+User-specific categories stored in Firestore
 
 📊 Dashboard
 
 Total Income
 
-Total Expense
+Total Expenses
 
 Current Balance
 
-Spending by Category (aggregated & sorted)
+Spending summary by category
 
 Quick navigation actions
 
-🎯 Filtering
+🎨 UI & UX
 
-Filter transactions by category
+Jetpack Compose with Material 3
 
-View all transactions or category-specific ones
+Clean, modern layout
+
+Loading, empty, and error states
+
+Confirmation dialogs for destructive actions
+
+Consistent design across screens
 
 🧱 Tech Stack
 Frontend
@@ -55,17 +86,19 @@ Kotlin
 
 Jetpack Compose
 
-Material 3
+Material Design 3
 
 Navigation Compose
 
 Architecture
 
-MVVM (Model–View–ViewModel)
+MVVM
+
+Repository Pattern
 
 StateFlow
 
-Repository Pattern
+Coroutines
 
 Backend
 
@@ -73,38 +106,19 @@ Firebase Authentication
 
 Firebase Firestore
 
-Real-time data streams
+Real-time listeners for live updates
 
-🏗 Project Structure
+🏗 App Architecture
 com.example.financetracker
 │
-├── auth/
-│   ├── AuthViewModel.kt
-│   └── AuthScreen.kt
-│
-├── dashboard/
-│   ├── DashboardScreen.kt
-│   ├── DashboardViewModel.kt
-│   └── DashboardComponents.kt
-│
-├── transactions/
-│   ├── model/
-│   ├── data/
-│   ├── ui/
-│   └── viewmodel/
-│
-├── categories/
-│   ├── model/
-│   ├── data/
-│   ├── ui/
-│   └── viewmodel/
-│
-├── navigation/
-│   └── Routes.kt
-│
+├── auth/              → Authentication logic & UI
+├── dashboard/         → Dashboard UI & ViewModel
+├── transactions/      → Transaction CRUD (UI, VM, Repo)
+├── categories/        → Category CRUD (UI, VM, Repo)
+├── navigation/        → Navigation routes & NavGraph
 └── MainActivity.kt
 
-🔄 Data Model
+🗃 Data Models
 Transaction
 
 id
@@ -129,19 +143,42 @@ color
 
 createdAt
 
-🔥 Key Highlights
+📸 Screenshots
 
-Fully reactive UI using StateFlow
+📌 Add your screenshots inside a /screenshots folder and update paths below
 
-Firestore real-time listeners
+Screen	Preview
+Login
 
-Aggregation logic for dashboard analytics
+Sign Up
 
-Clean separation of concerns
+Dashboard
 
-Dialog-based edit/delete UX
+Transactions
 
-Material 3 design principles
+Add Transaction
+
+Edit Transaction
+
+Categories
+
+Profile
+🎥 Video Walkthrough
+
+📺 YouTube Demo (Unlisted):
+👉 [Paste your YouTube link here]
+
+The video demonstrates:
+
+Authentication flow
+
+CRUD operations for transactions & categories
+
+Filtering
+
+Dashboard analytics
+
+Overall app navigation and UX
 
 🚀 Setup Instructions
 
@@ -151,49 +188,46 @@ Open the project in Android Studio
 
 Add your google-services.json file
 
-Enable:
+Enable in Firebase Console:
 
-Firebase Authentication
+Firebase Authentication (Email/Password)
 
 Firebase Firestore
 
-Run the app on an emulator or physical device
+Sync Gradle and run the app
 
-📸 Screens Implemented
+✅ Project Requirements Checklist
 
-Login / Logout
-
-Dashboard
-
-Transaction List
-
-Add Transaction
-
-Edit Transaction (Dialog)
-
-Delete Transaction (Dialog)
-
-Category Management
-
-Profile Screen
-
-📈 Future Improvements
-
-Date range filtering
-
-Charts & visual analytics
-
-Export transactions (CSV)
-
-Monthly summaries
-
-Dark mode enhancements
+✔ Authentication with Firebase
+✔ Persistent login
+✔ Two Firestore entities (Transactions & Categories)
+✔ Full CRUD operations
+✔ Real-time data sync
+✔ MVVM architecture
+✔ Navigation Component
+✔ Material 3 UI
+✔ Confirmation dialogs
+✔ Filter functionality
+✔ Clean code & structure
 
 👨‍💻 Author
 
 Ansh
-Android Developer | Kotlin | Jetpack Compose
+Android Developer
+Kotlin | Jetpack Compose | Firebase
 
 📜 License
 
-This project is for educational purposes and coursework submission.
+This project is developed for academic and educational purposes.
+
+⭐ Extra Mile
+
+Dialog-based edit/delete UX
+
+Real-time Firestore flows
+
+Clean separation of concerns
+
+Dashboard analytics logic
+
+Scalable architecture
