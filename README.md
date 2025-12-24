@@ -102,16 +102,15 @@ com.example.financetracker
 
 ### 📸 Screenshots & Demo
 
-📌 *Add your screenshots inside a `/screenshots` folder and update the paths below.*
-
 | Screen          | Preview     |
 | :-------------- | :---------: |
-| **Login**       | `[Image]`   |
-| **Sign Up**     | `[Image]`   |
-| **Dashboard**   | `[Image]`   |
-| **Transactions**| `[Image]`   |
-| **Add Transaction** | `[Image]`   |
-| **Categories**  | `[Image]`   |
+| **Login**       | <img src="app/screenshots/login.png" width="250">   |
+| **Sign Up**     | <img src="app/screenshots/signup.png" width="250">   |
+| **Profile**     | <img src="app/screenshots/profile.png" width="250">   |
+| **Dashboard**   | <img src="app/screenshots/dashboard.png" width="250">   |
+| **Transactions**| <img src="app/screenshots/transactions.png" width="250">   |
+| **Add Transaction** | <img src="app/screenshots/addtransaction.png" width="250">   |
+| **Categories**  | <img src="app/screenshots/categories.png" width="250">   |
 
 #### 🎥 Video Walkthrough
 
