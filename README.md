@@ -1,114 +1,75 @@
-💰 Finance Tracker — Android App
+# 💰 Finance Tracker - Android App
 
-A modern personal finance tracking Android application built using Jetpack Compose, Firebase, and MVVM architecture.
-This app allows users to securely track income and expenses, manage categories, and view real-time financial insights with a clean and intuitive UI.
+Finance Tracker is a modern, intuitive Android application designed to simplify personal finance management. Built with Jetpack Compose, Firebase, and a clean MVVM architecture, it offers users a secure and seamless way to track income, manage expenses, and gain real-time financial insights.
 
-📌 Project Overview
+---
 
-Managing personal finances can be overwhelming.
-Finance Tracker helps users:
+### 📌 Project Overview
 
-Track income and expenses
+Managing personal finances can be overwhelming. Finance Tracker empowers users to take control of their financial health by providing a simple yet powerful platform to:
 
-Categorize transactions
+-   **Track** income and expenses effortlessly.
+-   **Categorize** transactions for better organization.
+-   **View** clear financial summaries and dashboards.
+-   **Manage** data securely with Firebase Authentication and Firestore.
+-   **Experience** real-time data synchronization and a smooth, responsive UI.
 
-View financial summaries
+*This project was developed as part of a coursework submission and fully satisfies all required criteria.*
 
-Manage data securely with Firebase
+---
 
-Experience real-time updates and smooth UI interactions
+### 🎯 Features
 
-This project was developed as part of a coursework submission and fully satisfies all required criteria.
+**🔐 Authentication**
+-   Secure email & password sign-up and login powered by **Firebase Authentication**.
+-   Persistent login sessions for a seamless user experience.
+-   Secure logout functionality.
+-   User-specific data isolation ensuring privacy.
 
-🎯 Features
-🔐 Authentication
+**💸 Transaction Management**
+-   Add income and expense transactions with ease.
+-   Edit existing transactions through an intuitive dialog.
+-   Delete transactions with a confirmation prompt to prevent accidental data loss.
+-   Real-time data synchronization with **Firestore**.
+-   Filter transactions by category to quickly find what you'''re looking for.
 
-Email & Password sign-up and login
+**🗂 Category Management**
+-   Create, edit, and delete custom spending categories.
+-   Assign categories to transactions for detailed tracking.
+-   All categories are user-specific and stored securely in Firestore.
 
-Firebase Authentication
+**📊 Dashboard & Insights**
+-   At-a-glance view of **Total Income**, **Total Expenses**, and **Current Balance**.
+-   Visual summary of spending by category.
+-   Quick navigation actions to other screens.
 
-Persistent login session
+**🎨 UI & UX**
+-   Built entirely with **Jetpack Compose** following **Material 3** guidelines.
+-   Clean, modern, and intuitive user interface.
+-   Graceful handling of loading, empty, and error states.
+-   Confirmation dialogs for critical actions (e.g., delete).
 
-Secure logout
+---
 
-User-specific data isolation
+### 🧱 Tech Stack & Architecture
 
-💸 Transactions
+**Frontend:**
+-   `Kotlin`
+-   `Jetpack Compose`
+-   `Material Design 3`
+-   `Navigation Compose`
 
-Add income and expense transactions
+**Backend & Database:**
+-   `Firebase Authentication`
+-   `Firebase Firestore` (with real-time listeners)
 
-Edit transactions via dialog
+**Architecture & Concurrency:**
+-   `MVVM (Model-View-ViewModel)`
+-   `Repository Pattern`
+-   `Kotlin Coroutines` & `StateFlow` for asynchronous operations.
 
-Delete transactions with confirmation dialog
-
-Real-time Firestore synchronization
-
-Filter transactions by category
-
-🗂 Categories
-
-Create custom categories
-
-Edit and delete categories
-
-Assign categories to transactions
-
-User-specific categories stored in Firestore
-
-📊 Dashboard
-
-Total Income
-
-Total Expenses
-
-Current Balance
-
-Spending summary by category
-
-Quick navigation actions
-
-🎨 UI & UX
-
-Jetpack Compose with Material 3
-
-Clean, modern layout
-
-Loading, empty, and error states
-
-Confirmation dialogs for destructive actions
-
-Consistent design across screens
-
-🧱 Tech Stack
-Frontend
-
-Kotlin
-
-Jetpack Compose
-
-Material Design 3
-
-Navigation Compose
-
-Architecture
-
-MVVM
-
-Repository Pattern
-
-StateFlow
-
-Coroutines
-
-Backend
-
-Firebase Authentication
-
-Firebase Firestore
-
-Real-time listeners for live updates
-
-🏗 App Architecture
+**Application Structure:**
+```
 com.example.financetracker
 │
 ├── auth/              → Authentication logic & UI
@@ -117,117 +78,102 @@ com.example.financetracker
 ├── categories/        → Category CRUD (UI, VM, Repo)
 ├── navigation/        → Navigation routes & NavGraph
 └── MainActivity.kt
+```
 
-🗃 Data Models
-Transaction
+---
 
-id
+### 🗃 Data Models
 
-title
+**`Transaction`**
+-   `id`: `String`
+-   `title`: `String`
+-   `amount`: `Double`
+-   `type`: `String` (INCOME / EXPENSE)
+-   `categoryId`: `String`
+-   `timestamp`: `Timestamp`
 
-amount
+**`Category`**
+-   `id`: `String`
+-   `name`: `String`
+-   `color`: `String` (Hex code)
+-   `createdAt`: `Timestamp`
 
-type (INCOME / EXPENSE)
+---
 
-categoryId
+### 📸 Screenshots & Demo
 
-timestamp
+📌 *Add your screenshots inside a `/screenshots` folder and update the paths below.*
 
-Category
+| Screen          | Preview     |
+| :-------------- | :---------: |
+| **Login**       | `[Image]`   |
+| **Sign Up**     | `[Image]`   |
+| **Dashboard**   | `[Image]`   |
+| **Transactions**| `[Image]`   |
+| **Add Transaction** | `[Image]`   |
+| **Categories**  | `[Image]`   |
 
-id
+#### 🎥 Video Walkthrough
 
-name
-
-color
-
-createdAt
-
-📸 Screenshots
-
-📌 Add your screenshots inside a /screenshots folder and update paths below
-
-Screen	Preview
-Login
-
-Sign Up
-
-Dashboard
-
-Transactions
-
-Add Transaction
-
-Edit Transaction
-
-Categories
-
-Profile
-🎥 Video Walkthrough
-
-📺 YouTube Demo (Unlisted):
-👉 [Paste your YouTube link here]
+📺 **YouTube Demo (Unlisted):** https://youtube.com/shorts/TB-vJl5Pvu4
 
 The video demonstrates:
+-   Authentication flow (Sign-up & Login).
+-   Full CRUD operations for both transactions and categories.
+-   Real-time dashboard analytics.
+-   Filtering functionality.
+-   Overall app navigation and user experience.
 
-Authentication flow
+---
 
-CRUD operations for transactions & categories
+### 🚀 Setup Instructions
 
-Filtering
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/atomar1/financetracker.git
+    ```
+2.  Open the project in **Android Studio**.
+3.  **Add your `google-services.json` file** to the `app/` directory.
+4.  **Enable in Firebase Console:**
+    -   Firebase Authentication (Email/Password provider).
+    -   Firebase Firestore.
+5.  **Sync Gradle** and run the app.
 
-Dashboard analytics
+---
 
-Overall app navigation and UX
+### ✅ Project Requirements Checklist
 
-🚀 Setup Instructions
+-   [✔] Authentication with Firebase
+-   [✔] Persistent login session
+-   [✔] Two Firestore entities (Transactions & Categories)
+-   [✔] Full CRUD operations for both entities
+-   [✔] Real-time data synchronization
+-   [✔] MVVM architecture
+-   [✔] Navigation Component (Navigation Compose)
+-   [✔] Material 3 UI
+-   [✔] Confirmation dialogs for destructive actions
+-   [✔] Filter functionality
+-   [✔] Clean, well-structured code
 
-Clone the repository
+---
 
-Open the project in Android Studio
+### ⭐ Going the Extra Mile
 
-Add your google-services.json file
+-   **Enhanced UX:** Dialog-based editing and deleting provides a smoother user experience.
+-   **Reactive Data:** Use of `StateFlow` and Firestore'''s real-time listeners for a reactive UI.
+-   **Clean Architecture:** Strong separation of concerns between UI, ViewModel, and Repository layers.
+-   **Dashboard Analytics:** Logic for summarizing financial data on the dashboard.
+-   **Scalable Structure:** The architecture is designed to be easily extendable.
 
-Enable in Firebase Console:
+---
 
-Firebase Authentication (Email/Password)
+### 👨‍💻 Author
 
-Firebase Firestore
+**Ansh Tomar**
+*Android Developer | Kotlin | Jetpack Compose | Firebase*
 
-Sync Gradle and run the app
+---
 
-✅ Project Requirements Checklist
-
-✔ Authentication with Firebase
-✔ Persistent login
-✔ Two Firestore entities (Transactions & Categories)
-✔ Full CRUD operations
-✔ Real-time data sync
-✔ MVVM architecture
-✔ Navigation Component
-✔ Material 3 UI
-✔ Confirmation dialogs
-✔ Filter functionality
-✔ Clean code & structure
-
-👨‍💻 Author
-
-Ansh
-Android Developer
-Kotlin | Jetpack Compose | Firebase
-
-📜 License
+### 📜 License
 
 This project is developed for academic and educational purposes.
-
-⭐ Extra Mile
-
-Dialog-based edit/delete UX
-
-Real-time Firestore flows
-
-Clean separation of concerns
-
-Dashboard analytics logic
-
-Scalable architecture
